@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
+  // baseURL: 'http://localhost:8080/api',
   baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8080/api',
 });
 
@@ -35,6 +36,11 @@ export const groqAIRequest = async (prompt: string) => {
     }
   );
   return response.data.choices[0].message.content.trim();
+};
+
+export const login = async (email: string, password: string) => {
+  const response = await api.post('/auth/login', { email, password });
+  return response.data;
 };
 
 export default api;
