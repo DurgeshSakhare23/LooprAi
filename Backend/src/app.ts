@@ -14,8 +14,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:3001',
-  'https://looprai-2.onrender.com',   // if deployed here
-  'https://your-frontend.onrender.com',  // replace with actual URL if needed
+  'https://looprai-2.onrender.com',  // replace with actual URL if needed
 ];
 
 
